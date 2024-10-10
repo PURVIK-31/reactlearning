@@ -38,3 +38,25 @@ import navbar from "./prerequisites";
 export function nav2(){
 
 }
+
+import {nav2} from "./prerequisites";
+
+
+
+// arrow functions 
+
+const functionn = () => {
+
+}
+
+functionn();
+
+// with parameters: 
+ const printting = params  => {
+    console.log("hello" + params);
+}
+ const printting2 = (params)  => {
+    console.log("hello" + params);
+}
+
+printting("phoe");
