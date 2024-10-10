@@ -60,3 +60,28 @@ functionn();
 }
 
 printting("phoe");
+
+const abcs = () => 1;
+console.log(abcs + 1);
+
+//for returning objects : 
+
+const objreturn = () =>({
+    key : "123",
+    named :  " pheo "
+}) 
+
+// map filter
+
+
+// lessgo with map first : 
+ 
+let array = [1,2,3,4,5,6,7,8,9,10];
+
+const  ans = array.map( (value)=> value-1)
+
+array.map( (element) =>{
+    element>5? console.log(element) : console.log("hello")
+})
+
+array.filter( (element) => element>5)
