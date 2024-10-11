@@ -8,7 +8,7 @@ function App() {
 const arr = [1,2,3,4,5,6,7,8,9,10];
   return (
     <div>
-      {arr.map((value)=> <h1>arr value is {value}</h1>)}
+      {arr.map((value, index)=> <h1 key={index} >arr value is {value}  </h1>)}
     </div>
   )   
 }
