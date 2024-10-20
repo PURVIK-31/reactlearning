@@ -1,10 +1,14 @@
 import React from 'react'
 
-function card() {
+function card({text}) {
   return (
-    <div>
-      hemlo jiiiiiiiii
+    
+    <div >
+       <button style={{backgroundColor: 'lightpink', color: 'white', margin: '1px', display: 'flex'}}>
+        {text}
+       </button>
     </div>
+    
   )
 }
 
