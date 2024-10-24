@@ -3,20 +3,10 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  // Function to increment the count
-  const increase = () => {
-    setCount(count + 1); // Use the setter function to update the state
-  }
-
+export default function App() {
   return (
-    <>
-      <h1>The count value increases by 1: {count}</h1>
-      <button onClick={increase}>Increase Count</button>
-    </>
+    <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
   )
 }
-
-export default App;
