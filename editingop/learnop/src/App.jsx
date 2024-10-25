@@ -8,9 +8,6 @@ export default function App() {
     countupdate(count+1)
   }
   return (
-    <h1 className="text-3xl font-bold bg-gray-700 flex-shrink">
-yohohohohho the state is  {count}
-<button className='m-3 bg-slate-100' onClick={update}> click guruji </button>
-    </h1>
+ <h1> hi there buddies </h1>
   )
 }
