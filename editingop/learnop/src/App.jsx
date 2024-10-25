@@ -6,6 +6,7 @@ export default function App() {
 const handlesubmit = (event)=>{
 event.preventDefault();
 console.log(name.current.value,age.current.value);
+console.log("this concluded the first way of form handling through useref hook in react !")
 }
 const name = useRef(null)
 const age = useRef(null)
