@@ -5,9 +5,11 @@ import './App.css'
 export default function App() {
 const handlesubmit = (event)=>{
 event.preventDefault();
+console.log(name.current.value,age.current.value);
 }
 const name = useRef(null)
 const age = useRef(null)
+
   return (
   <>
   <div className='m-4 p-3'>
