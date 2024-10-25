@@ -1,16 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useForm } from 'react-hook-form'
 
 function App() {
-  const [val,setval] = useState({name:"", email:""})
+  const {register, handleSubmit}= useForm()
   return (
-    <div className='m-4 p-7'>
-      <form action="" onSubmit={(e)=> {
-        e.preventDefault()
-        console.log(val)
-      }}>
-        <input onChange={(e)=>setval({...val,name :e.target.value})} type="text" placeholder= 'WRITE HERE !' />
-        <input onChange={(e)=>setval({...val,email :e.target.value})} type="email" placeholder= 'WRITE  mail HERE !' />
-        <input type="submit" />
+    <div className='m-6 p-5 bg-slate-200'>
+      <form action="" onSubmit={handleSubmit(data=>console.log(data))}>
+        <input {...register("name")}type="text" placeholder='ENTER NAME HERE' />
+        <input {...register("email")} type="text" placeholder='ENTER EMAIL HERE' />
+        <input type='submit'/>
       </form>
     </div>
   )
