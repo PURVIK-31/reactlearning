@@ -1,11 +1,13 @@
 import React from 'react'
-
-function cards() {
+import Card from './card'
+function Cards() {
   return (
-    <div>
-      hi from card!
+    <div className='w-full h-full p-3 overflow-hidden'>
+      <Card />
     </div>
-  )
+  );
 }
 
-export default cards
+
+
+export default Cards;
