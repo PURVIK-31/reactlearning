@@ -8,7 +8,7 @@ function App() {
         e.preventDefault()
         console.log(val)
       }}>
-        <input onChange={(e)=>setval({name :e.target.value})} type="text" placeholder= 'LIKH YHA MERE BHAI !' />
+        <input onChange={(e)=>setval({name :e.target.value})} type="text" placeholder= 'WRITE HERE !' />
         <input type="submit" />
       </form>
     </div>
