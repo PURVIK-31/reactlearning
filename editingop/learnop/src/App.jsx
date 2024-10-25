@@ -4,7 +4,7 @@ function App() {
   const [val,setval] = useState({name:"", email:""})
   return (
     <div className='m-4 p-7'>
-      <form action="" onSubmit={(e)=>{
+      <form action="" onSubmit={(e)=> {
         e.preventDefault()
         console.log(val)
       }}>
