@@ -1,13 +1,15 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 function App() {
   const [socket, setSocket] = useState();
+  const inputref = useRef();
   function sendMessage() {
     if (!socket) {
       return;
     }
+    const message = inputref.current.value;
     //@ts-ignore
-    socket.send("ping");
+    socket.send(message);
   }
   useEffect(() => {
     const ws = new WebSocket("ws://localhost:8080/");
@@ -16,15 +18,13 @@ function App() {
       alert(e.data);
     };
   }, []);
-  // Error 1: Incorrect syntax - remove the curly brace after return
-  // Error 2: Semicolon after div is causing invalid JSX
-  // Error 3: Self-closing input tag should use /> not ></input>
-  // Error 1: Missing closing curly brace for App function
-  // Error 2: useState needs a type parameter
-  // Error 3: WebSocket connection should be cleaned up on unmount
   return (
     <div>
-      <input type="text" placeholder="MESSAGE PUT HERE BISH !!" />
+      <input
+        ref={inputref}
+        type="text"
+        placeholder="MESSAGE PUT HERE BISH !!"
+      />
       <button onClick={sendMessage}> SEND </button>
     </div>
   );
