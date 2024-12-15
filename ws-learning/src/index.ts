@@ -1,1 +1,2 @@
-console.log("works pretty dope");
+import { WebSocketServer } from "ws";
+const wss = new WebSocketServer({ port: 3000 });
