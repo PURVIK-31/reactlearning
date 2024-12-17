@@ -1,11 +1,16 @@
 import { WebSocketServer, WebSocket } from "ws";
 const wss = new WebSocketServer({ port: 8080 });
-let websocketcounter: WebSocket[] = [];
+interface User {
+  socket: WebSocket;
+  room: string;
+}
+let allsockets: User[] = [];
 wss.on("connection", function (socket) {
-  websocketcounter.push(socket);
-  socket.on("message", function (data) {
-    websocketcounter.forEach((ws) => {
-      ws.send(data.toString());
-    });
+  socket.on("message", function (message) {
+    const parsedmessage = JSON.parse(message as unknown as string);
+    if (parsedmessage.type === "join") {
+    }
+    if (parsedmessage.type === "chat") {
+    }
   });
 });
