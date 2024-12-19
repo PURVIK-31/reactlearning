@@ -11,19 +11,20 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 Object.defineProperty(exports, "__esModule", { value: true });
 const pg_1 = require("pg");
 const client = new pg_1.Client("postgresql://neondb_owner:PCBUyo1ON5uQ@ep-odd-term-a80555e3.eastus2.azure.neon.tech/neondb?sslmode=require");
-function createUsersTable() {
-    return __awaiter(this, void 0, void 0, function* () {
-        yield client.connect();
-        const result = yield client.query(`
-      CREATE TABLE users (
-          id SERIAL PRIMARY KEY,
-          username VARCHAR(50) UNIQUE NOT NULL,
-          email VARCHAR(255) UNIQUE NOT NULL,
-          password VARCHAR(255) NOT NULL,
-          created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
-      );
-  `);
-        console.log(result);
-    });
-}
-createUsersTable();
+const crafttable = () => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        client.connect();
+        client.query(`CREATE TABLE  craftedtable (
+      id SERIAL PRIMARY KEY,
+      name VARCHAR(29) NOT NULL,
+      reffered VARCHAR(35) ,
+      email VARCHAR(37) NOT NULL UNIQUE,
+      password VARCHAR(30) NOT NULL
+      ) `);
+    }
+    catch (error) {
+        console.log("nahi bnega beta");
+    }
+});
+const respo = crafttable();
+console.log(respo);
